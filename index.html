@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="logo">
+                <img src="./IMAGES/logo.jpg" alt="VideoTube">
+                <h1>VideoTube</h1>
+            </a>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="header-right">
+            <button class="header-icon">
+                <i class="fas fa-video"></i>
+            </button>
+            <button class="header-icon">
+                <i class="fas fa-bell"></i>
+            </button>
+            <button class="header-icon">
+                <i class="fas fa-user-circle"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="video-container"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="app.js"></script>
+
+    <div class="category-pills">
+        <div class="category-pill active">All</div>
+        <div class="category-pill">Music</div>
+        <div class="category-pill">Gaming</div>
+        <div class="category-pill">News</div>
+        <div class="category-pill">Sports</div>
+        <div class="category-pill">Education</div>
+        <div class="category-pill">Entertainment</div>
+        <div class="category-pill">Technology</div>
+        <div class="category-pill">Cooking</div>
+        <div class="category-pill">Travel</div>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <div class="sidebar-section">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="/explore" class="nav-item">
+                    <i class="fas fa-compass"></i>
+                    Explore
+                </a>
+                <a href="/trending" class="nav-item">
+                    <i class="fas fa-fire"></i>
+                    Trending
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">Library</h3>
+                <a href="/library" class="nav-item">Library</a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-clock"></i>
+                    Watch Later
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    Liked Videos
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">Subscriptions</h3>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-circle"></i>
+                    Channel 1
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-circle"></i>
+                    Channel 2
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user-circle"></i>
+                    Channel 3
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="video-controls">
+        <button class="play-pause">Play</button>
+        <button class="volume">Volume</button>
+        <button class="fullscreen">Fullscreen</button>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+</body>
+</html>
